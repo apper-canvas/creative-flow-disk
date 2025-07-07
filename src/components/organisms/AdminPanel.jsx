@@ -1,15 +1,17 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { toast } from 'react-toastify';
-import Button from '@/components/atoms/Button';
-import Input from '@/components/atoms/Input';
-import TextArea from '@/components/atoms/TextArea';
-import Badge from '@/components/atoms/Badge';
-import ApperIcon from '@/components/ApperIcon';
-import Loading from '@/components/ui/Loading';
-import Error from '@/components/ui/Error';
-import projectService from '@/services/api/projectService';
-import blogService from '@/services/api/blogService';
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+import ApperIcon from "@/components/ApperIcon";
+import Badge from "@/components/atoms/Badge";
+import Button from "@/components/atoms/Button";
+import Input from "@/components/atoms/Input";
+import TextArea from "@/components/atoms/TextArea";
+import Error from "@/components/ui/Error";
+import Loading from "@/components/ui/Loading";
+import Blog from "@/components/pages/Blog";
+import Projects from "@/components/pages/Projects";
+import projectService from "@/services/api/projectService";
+import blogService from "@/services/api/blogService";
 
 const AdminPanel = () => {
   const [activeTab, setActiveTab] = useState('projects');
@@ -32,15 +34,14 @@ const AdminPanel = () => {
     technologies: ''
   });
 
-  const [blogForm, setBlogForm] = useState({
+const [blogForm, setBlogForm] = useState({
     title: '',
     excerpt: '',
     content: '',
     tags: '',
-    readTime: 5,
+    read_time: 5,
     image: ''
   });
-
   const loadData = async () => {
     try {
       setLoading(true);
@@ -99,13 +100,13 @@ const AdminPanel = () => {
     }
   };
 
-  const handleBlogSubmit = async (e) => {
+const handleBlogSubmit = async (e) => {
     e.preventDefault();
     try {
       const formattedData = {
         ...blogForm,
         tags: blogForm.tags.split(',').map(tag => tag.trim()),
-        readTime: parseInt(blogForm.readTime)
+        readTime: parseInt(blogForm.read_time)
       };
 
       if (isEditing) {
@@ -121,7 +122,7 @@ const AdminPanel = () => {
         excerpt: '',
         content: '',
         tags: '',
-        readTime: 5,
+        read_time: 5,
         image: ''
       });
       setIsEditing(false);
@@ -150,12 +151,12 @@ const AdminPanel = () => {
       });
       setActiveTab('projects');
     } else {
-      setBlogForm({
+setBlogForm({
         title: item.title,
         excerpt: item.excerpt,
         content: item.content,
-        tags: item.tags.join(', '),
-        readTime: item.readTime,
+        tags: item.Tags ? item.Tags.split(',').join(', ') : '',
+        read_time: item.read_time,
         image: item.image
       });
       setActiveTab('blog');
@@ -433,12 +434,12 @@ const AdminPanel = () => {
                     placeholder="Design, Development, Tutorial"
                   />
                 </div>
-                <div>
+<div>
                   <label className="block text-sm font-medium mb-2">Read Time (minutes)</label>
                   <Input
                     type="number"
-                    value={blogForm.readTime}
-                    onChange={(e) => setBlogForm({...blogForm, readTime: e.target.value})}
+                    value={blogForm.read_time}
+                    onChange={(e) => setBlogForm({...blogForm, read_time: e.target.value})}
                     min="1"
                   />
                 </div>
@@ -464,12 +465,12 @@ const AdminPanel = () => {
                     onClick={() => {
                       setIsEditing(false);
                       setEditingItem(null);
-                      setBlogForm({
+setBlogForm({
                         title: '',
                         excerpt: '',
                         content: '',
                         tags: '',
-                        readTime: 5,
+                        read_time: 5,
                         image: ''
                       });
                     }}
@@ -497,13 +498,13 @@ const AdminPanel = () => {
                     <p className="text-gray-600 dark:text-gray-400 mb-2 line-clamp-2">
                       {post.excerpt}
                     </p>
-                    <div className="flex gap-2 mb-2">
-                      {post.tags.slice(0, 3).map((tag, index) => (
-                        <Badge key={index} variant="default">{tag}</Badge>
+<div className="flex gap-2 mb-2">
+                      {(post.Tags ? post.Tags.split(',') : []).slice(0, 3).map((tag, index) => (
+                        <Badge key={index} variant="default">{tag.trim()}</Badge>
                       ))}
                     </div>
                     <p className="text-sm text-gray-500">
-                      {new Date(post.date).toLocaleDateString()} | {post.readTime} min read
+                      {new Date(post.date).toLocaleDateString()} | {post.read_time} min read
                     </p>
                   </div>
                   <div className="flex gap-2 ml-4">

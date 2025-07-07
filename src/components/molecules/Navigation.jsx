@@ -1,15 +1,15 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import ApperIcon from '@/components/ApperIcon';
 import Button from '@/components/atoms/Button';
 import { useDarkMode } from '@/hooks/useDarkMode';
-
+import { AuthContext } from '../../App';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { darkMode, toggleDarkMode } = useDarkMode();
-
+  const { logout } = useContext(AuthContext);
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/projects', label: 'Projects' },
@@ -57,7 +57,7 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Dark Mode Toggle & Mobile Menu */}
+{/* Dark Mode Toggle, Logout & Mobile Menu */}
           <div className="flex items-center gap-4">
             <Button
               variant="ghost"
@@ -69,6 +69,16 @@ const Navigation = () => {
                 name={darkMode ? 'Sun' : 'Moon'} 
                 size={20} 
               />
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={logout}
+              className="hidden md:flex items-center gap-2 p-2"
+            >
+              <ApperIcon name="LogOut" size={16} />
+              <span className="text-sm">Logout</span>
             </Button>
 
             {/* Mobile Menu Button */}
@@ -93,7 +103,7 @@ const Navigation = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white dark:bg-background border-t border-gray-200 dark:border-gray-800"
           >
-            <div className="container-padding py-4">
+<div className="container-padding py-4">
               <div className="flex flex-col gap-4">
                 {navItems.map((item) => (
                   <Link
@@ -107,6 +117,17 @@ const Navigation = () => {
                     {item.label}
                   </Link>
                 ))}
+                <Button
+                  variant="ghost"
+                  onClick={() => {
+                    logout();
+                    setIsOpen(false);
+                  }}
+                  className="md:hidden flex items-center gap-2 justify-start p-2 text-red-600"
+                >
+                  <ApperIcon name="LogOut" size={16} />
+                  <span>Logout</span>
+                </Button>
               </div>
             </div>
           </motion.div>
