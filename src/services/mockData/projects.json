@@ -1,0 +1,104 @@
+[
+  {
+    "Id": 1,
+    "title": "E-Commerce Platform Redesign",
+    "description": "A complete redesign of a major e-commerce platform focusing on user experience and conversion optimization. The project involved extensive user research, prototyping, and A/B testing to create a modern, intuitive shopping experience.",
+    "category": "Web Design",
+    "tags": ["UI/UX", "E-commerce", "Figma", "React"],
+    "images": [
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    ],
+    "featured": true,
+    "date": "2024-01-15",
+    "client": "TechCorp Inc.",
+    "link": "https://example.com",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Stripe API"]
+  },
+  {
+    "Id": 2,
+    "title": "Mobile Banking App",
+    "description": "Designed and developed a secure mobile banking application with biometric authentication and real-time transaction monitoring. The app focuses on simplicity and security while providing comprehensive banking features.",
+    "category": "Mobile App",
+    "tags": ["Mobile", "Fintech", "React Native", "Security"],
+    "images": [
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop"
+    ],
+    "featured": true,
+    "date": "2023-11-20",
+    "client": "SecureBank",
+    "link": "https://example.com",
+    "technologies": ["React Native", "Node.js", "MongoDB", "Biometric SDK"]
+  },
+  {
+    "Id": 3,
+    "title": "Brand Identity System",
+    "description": "Created a comprehensive brand identity system for a sustainable fashion startup, including logo design, color palette, typography, and brand guidelines. The design reflects the company's commitment to environmental responsibility.",
+    "category": "Branding",
+    "tags": ["Logo Design", "Brand Identity", "Sustainability", "Adobe Creative Suite"],
+    "images": [
+      "https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800&h=600&fit=crop"
+    ],
+    "featured": true,
+    "date": "2023-10-05",
+    "client": "EcoFashion Co.",
+    "link": "https://example.com",
+    "technologies": ["Adobe Illustrator", "Adobe Photoshop", "Figma"]
+  },
+  {
+    "Id": 4,
+    "title": "Healthcare Dashboard",
+    "description": "Developed a comprehensive healthcare dashboard for medical professionals to track patient data, appointments, and treatment outcomes. The interface prioritizes clarity and quick access to critical information.",
+    "category": "Web App",
+    "tags": ["Healthcare", "Dashboard", "Data Visualization", "Vue.js"],
+    "images": [
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=800&h=600&fit=crop"
+    ],
+    "featured": false,
+    "date": "2023-09-12",
+    "client": "MedTech Solutions",
+    "link": "https://example.com",
+    "technologies": ["Vue.js", "Chart.js", "Laravel", "MySQL"]
+  },
+  {
+    "Id": 5,
+    "title": "Educational Platform",
+    "description": "Built an interactive educational platform for online learning with video streaming, progress tracking, and gamification elements. The platform serves thousands of students across multiple subjects.",
+    "category": "Web App",
+    "tags": ["Education", "Interactive", "Gamification", "Angular"],
+    "images": [
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
+    ],
+    "featured": false,
+    "date": "2023-08-30",
+    "client": "EduTech Academy",
+    "link": "https://example.com",
+    "technologies": ["Angular", "Node.js", "Socket.io", "AWS"]
+  },
+  {
+    "Id": 6,
+    "title": "Restaurant Management System",
+    "description": "Designed and developed a complete restaurant management system including point-of-sale, inventory management, and customer relationship features. The system improved operational efficiency by 40%.",
+    "category": "Web App",
+    "tags": ["Restaurant", "Management", "POS", "Python"],
+    "images": [
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop"
+    ],
+    "featured": false,
+    "date": "2023-07-18",
+    "client": "Bistro Chain",
+    "link": "https://example.com",
+    "technologies": ["Django", "PostgreSQL", "Redis", "Stripe"]
+  }
+]

@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-toastify/dist/ReactToastify.css';
+
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white dark:bg-background text-gray-900 dark:text-white font-body;
+    @apply transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-lg font-medium;
+    @apply hover:scale-105 hover:shadow-lg transition-all duration-200;
+    @apply active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-white dark:bg-surface text-gray-900 dark:text-white px-6 py-3 rounded-lg font-medium;
+    @apply border border-gray-200 dark:border-gray-700;
+    @apply hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-surface rounded-xl shadow-lg dark:shadow-2xl;
+    @apply border border-gray-100 dark:border-gray-800;
+    @apply hover:shadow-xl dark:hover:shadow-3xl transition-shadow duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700;
+    @apply bg-white dark:bg-surface text-gray-900 dark:text-white;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary;
+    @apply transition-all duration-200;
+  }
+  
+  .nav-link {
+    @apply text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary;
+    @apply font-medium transition-colors duration-200;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .container-padding {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Toast overrides */
+.Toastify__toast-container {
+  @apply top-4 right-4;
+  width: 320px;
+  z-index: 9999;
+}
+
+.Toastify__toast {
+  @apply rounded-lg shadow-lg;
+  @apply bg-white dark:bg-surface;
+  @apply text-gray-900 dark:text-white;
+  @apply border border-gray-200 dark:border-gray-700;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  min-height: 48px;
+  padding: 12px 16px;
+}
+
+.Toastify__toast--success {
+  @apply border-l-4 border-l-success;
+}
+
+.Toastify__toast--error {
+  @apply border-l-4 border-l-error;
+}
+
+.Toastify__toast--warning {
+  @apply border-l-4 border-l-warning;
+}
+
+.Toastify__toast--info {
+  @apply border-l-4 border-l-info;
+}
+
+.Toastify__progress-bar {
+  @apply bg-primary;
+}
+
+.Toastify__close-button {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-gray-500;
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "Id": 1,
+    "title": "The Future of Web Design: Trends to Watch in 2024",
+    "excerpt": "Explore the latest trends shaping the future of web design, from AI-powered interfaces to immersive experiences that blur the line between digital and physical.",
+    "content": "The web design landscape is evolving rapidly, with new technologies and user expectations driving innovation. In 2024, we're seeing a shift towards more personalized, AI-driven experiences that adapt to user behavior in real-time...",
+    "author": "Creative Designer",
+    "date": "2024-01-10",
+    "tags": ["Web Design", "Trends", "AI", "UX"],
+    "readTime": 5,
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop"
+  },
+  {
+    "Id": 2,
+    "title": "Building Accessible Interfaces: A Developer's Guide",
+    "excerpt": "Learn how to create inclusive digital experiences that work for everyone, with practical tips and code examples for implementing accessibility best practices.",
+    "content": "Accessibility isn't just a nice-to-have feature—it's a fundamental requirement for creating inclusive digital experiences. In this comprehensive guide, we'll explore the key principles of accessible design...",
+    "author": "Creative Designer",
+    "date": "2023-12-28",
+    "tags": ["Accessibility", "Development", "UX", "Best Practices"],
+    "readTime": 8,
+    "image": "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?w=800&h=400&fit=crop"
+  },
+  {
+    "Id": 3,
+    "title": "Color Psychology in Digital Design",
+    "excerpt": "Discover how color choices impact user behavior and emotional responses in digital interfaces, with real-world examples and practical applications.",
+    "content": "Color is one of the most powerful tools in a designer's arsenal. It can evoke emotions, guide attention, and even influence purchasing decisions. Understanding color psychology is crucial for creating effective digital experiences...",
+    "author": "Creative Designer",
+    "date": "2023-12-15",
+    "tags": ["Color Theory", "Psychology", "Design", "Branding"],
+    "readTime": 6,
+    "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&h=400&fit=crop"
+  },
+  {
+    "Id": 4,
+    "title": "Mastering Typography for Better User Experience",
+    "excerpt": "Typography is more than just choosing fonts. Learn how to create hierarchies, improve readability, and enhance the overall user experience through thoughtful type design.",
+    "content": "Typography is the backbone of good design. It's the bridge between the designer's vision and the user's understanding. In this article, we'll explore how to leverage typography to create better user experiences...",
+    "author": "Creative Designer",
+    "date": "2023-11-30",
+    "tags": ["Typography", "UX", "Design", "Readability"],
+    "readTime": 7,
+    "image": "https://images.unsplash.com/photo-1486312338219-ce68e2c6f44d?w=800&h=400&fit=crop"
+  }
+]
