@@ -95,7 +95,7 @@ class ProjectService {
     try {
       if (!this.apperClient) this.initializeClient();
       
-      const params = {
+const params = {
         fields: [
           { field: { Name: "Name" } },
           { field: { Name: "Tags" } },
@@ -114,7 +114,7 @@ class ProjectService {
           {
             FieldName: "featured",
             Operator: "EqualTo",
-            Values: [true]
+            Values: ["true"]
           }
         ]
       };
